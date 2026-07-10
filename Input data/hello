@@ -1,1 +1,17 @@
-
+--------- Necessary files for running this investigation ---------
+# Control + polystyrene exposed mice PFC samples
+GSE 159881
+Control - SRR12879947
+Control - SRR12879948
+Control - SRR12879949
+Exposed/High - SRR12879950
+Exposed/High - SRR12879951
+Exposed/High - SRR12879952
+# Healthy + RCC tissues human samples
+GSE 151423
+Healthy/Control - SRR11873712
+Healthy/Control - SRR11873715
+Healthy/Control - SRR11873716
+RCC/High - SRR11873709
+RCC/High - SRR11873710
+RCC/High - SRR11873711
