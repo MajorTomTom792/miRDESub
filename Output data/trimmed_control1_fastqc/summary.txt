@@ -1,0 +1,10 @@
+PASS	Basic Statistics	trimmed_control1.fastq
+PASS	Per base sequence quality	trimmed_control1.fastq
+PASS	Per sequence quality scores	trimmed_control1.fastq
+FAIL	Per base sequence content	trimmed_control1.fastq
+WARN	Per sequence GC content	trimmed_control1.fastq
+PASS	Per base N content	trimmed_control1.fastq
+WARN	Sequence Length Distribution	trimmed_control1.fastq
+FAIL	Sequence Duplication Levels	trimmed_control1.fastq
+FAIL	Overrepresented sequences	trimmed_control1.fastq
+PASS	Adapter Content	trimmed_control1.fastq
