@@ -6,10 +6,8 @@ This repository accompanies the paper "An Integrated Pipeline for Differential E
 
 Differential expression workflow begins with FASTQ file input into adapter trimming and quality filtering using Cutadapt, followed by quality assessment with FastQC. Reads are then collapsed into unique sequence groups while storing abundance information in headers within newly created fasta files before alignment against mature miRNA sequences of a desired species using Bowtie2. Alignment results are processed into CSV format for differential expression analysis using PyDESeq2. 
 
-For candidate substitution analysis, Bowtie2 SAM file output was used, where a custom Python function called samAnalyzer analyzed SAM alignment records to extract candidate nucleotide substitution events, their genomic positions, and supporting sequence counts. CSV files are given
-These events are subsequently normalized, statistically evaluated, and visualized through heatmaps, positional analyses, volcano plots, and additional summary figures.
 
-
+For candidate substitution analysis, Bowtie2 SAM file output was used, where a custom Python function called samAnalyzer analyzed SAM alignment records to extract candidate nucleotide substitution events, their genomic positions, and supporting sequence counts. CSV files are given in normalized (RPM) or unnormalized formats. Unnormalized files modified with index containing sequence changed, position, and event in a single column. This representation permits event-level differential abundance analysis using the same framework applied to gene-level count data. For this reason, unique substitution events and their counts can be applied to PyDESeq2. However, samAnalyzer data is not limited to only PyDESeq2 downstream analysis, the candidate event files can be used with any downstream statistical or bioinformatics workflow that accepts such tabular count data format.
 
 Unlike existing workflows that primarily focus on isomiR annotation and expression quantification, miRDESub performs event-level analysis of candidate nucleotide substitutions extracted directly from alignment mismatches. The pipeline is designed to be species independent by allowing users to substitute mature miRNA reference sequences from any organism represented in miRBase. All downstream analysis modules remain unchanged regardless of the selected species.
 
