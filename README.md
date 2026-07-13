@@ -1,9 +1,15 @@
-# miRNA-analysis
-miRDESub is an integrated bioinformatics pipeline for differential expression and candidate miRNA substitution event analysis using small RNA sequencing data. The pipeline combines established bioinformatics software with custom Python modules to provide a reproducible workflow for processing mature miRNA sequencing datasets from raw sequencing reads through downstream statistical analysis and visualization. In addition to conventional differential expression analysis, miRDESub introduces an event-level framework for detecting and quantifying candidate nucleotide substitution events extracted directly from alignment mismatches recorded in SAM files.
 
+# miRNA-analysis
 This repository accompanies the paper "An Integrated Pipeline for Differential Expression and Candidate miRNA Substitution Event Analysis in Polystyrene Microplastic-Exposed Mouse Prefrontal Cortex." The pipeline was developed using publicly available mouse prefrontal cortex miRNA sequencing data following polystyrene nanoplastic exposure and validated using independent positive-control datasets for both differential expression and candidate substitution detection.
 
-The workflow begins with adapter trimming and quality filtering using Cutadapt, followed by quality assessment with FastQC. Reads are then collapsed into unique sequence groups while preserving abundance information before alignment against mature miRNA reference sequences from miRBase using Bowtie2. Alignment results are processed for differential expression analysis using PyDESeq2, while custom Python modules analyze SAM alignment records to extract candidate nucleotide substitution events, their genomic positions, and supporting sequence counts. These events are subsequently normalized, statistically evaluated, and visualized through heatmaps, positional analyses, volcano plots, and additional summary figures.
+<img width="553" height="258" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/221f14e5-a508-4a64-aae2-35072a1eea41" />
+
+Differential expression workflow begins with FASTQ file input into adapter trimming and quality filtering using Cutadapt, followed by quality assessment with FastQC. Reads are then collapsed into unique sequence groups while storing abundance information in headers within newly created fasta files before alignment against mature miRNA sequences of a desired species using Bowtie2. Alignment results are processed into CSV format for differential expression analysis using PyDESeq2. 
+
+For candidate substitution analysis, Bowtie2 SAM file output was used, where a custom Python function called samAnalyzer analyzed SAM alignment records to extract candidate nucleotide substitution events, their genomic positions, and supporting sequence counts. CSV files are given
+These events are subsequently normalized, statistically evaluated, and visualized through heatmaps, positional analyses, volcano plots, and additional summary figures.
+
+
 
 Unlike existing workflows that primarily focus on isomiR annotation and expression quantification, miRDESub performs event-level analysis of candidate nucleotide substitutions extracted directly from alignment mismatches. The pipeline is designed to be species independent by allowing users to substitute mature miRNA reference sequences from any organism represented in miRBase. All downstream analysis modules remain unchanged regardless of the selected species.
 
