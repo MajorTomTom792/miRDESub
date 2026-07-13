@@ -1,7 +1,4 @@
-
-
-
-# miRNA-analysis
+# miRDESub
 This repository accompanies the paper "An Integrated Pipeline for Differential Expression and Candidate miRNA Substitution Event Analysis in Polystyrene Microplastic-Exposed Mouse Prefrontal Cortex." The pipeline was developed using publicly available mouse prefrontal cortex small RNA sequencing data following polystyrene nanoplastic exposure and validated using independent positive-control datasets for both differential expression and candidate substitution detection. The pipeline was implemented in Python and developed using Google Colab (runtime version 2026.4). All necessary dependencies are installed and imported within the Google Colab notebook.
 
 Unlike existing workflows that primarily focus on isomiR annotation and expression quantification, miRDESub performs event-level analysis of candidate nucleotide substitutions extracted directly from alignment mismatches. The pipeline is designed to be species independent by allowing users to substitute mature miRNA reference sequences from any organism represented in miRBase. All downstream analysis modules remain unchanged regardless of the selected species.
