@@ -13,4 +13,9 @@ For candidate substitution analysis, Bowtie2 SAM file output was used, where a c
 
 To verify validity of the pipeline for microplastics-mice dataset, the differential expression workflow was evaluated using an independent human renal cell carcinoma small RNA sequencing dataset, successfully recovering eight differentially expressed miRNAs genes of interested first reported in the original publication. The candidate substitution detection module was independently validated using randomly sampled NucVar isomiRs obtained from isomiRdb, with accurate recovery of sequence where event occurred, position, and the candidate event itself.
 
+Input files are given in SRA Input Files in (Input data/SRA input files)
+
+
+
+
 The repository contains all custom Python scripts developed for pipeline modules, together with representative output figures and supplementary CSV files generated during the study. Because of manuscript space limitations, only representative figures are included in the manuscript, while complete analysis outputs and supplementary results are provided in this repository to allow for reproducibility and independent evaluation.
